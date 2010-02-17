@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+lib/osxscreenshot.rb
+test/test_osxscreenshot.rb
+vendor/webkit2png.py
