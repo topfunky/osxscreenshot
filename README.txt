@@ -32,7 +32,7 @@ Or, pass some (optional) options.
 
     file_path =
       OSX::Screenshot.capture(my_url, {
-                         :tmp        => "#{Sinatra::Application.root}/tmp",
+                         :tmpdir     => "#{Sinatra::Application.root}/tmp",
                          :webkit2png => "#{Sinatra::Application.root}/bin/webkit2png.py",
                          :mogrify    => "/opt/local/bin/mogrify",
                          :width      => 220,
