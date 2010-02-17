@@ -18,7 +18,7 @@ class TestOsxscreenshot < Test::Unit::TestCase
   
   def test_uses_custom_tmpdir
     @tmpfile = OSX::Screenshot.capture("http://example.com", :tmpdir => "./tmp")
-    assert_match /^\.\/tmp/, @tmpfile
+    assert_match(/^\.\/tmp/, @tmpfile)
     assert File.exist?(@tmpfile)
   end
   

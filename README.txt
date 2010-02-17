@@ -5,7 +5,7 @@
 == DESCRIPTION:
 
 Wrapper around webkit2png.py to easily and programmatically capture
-screenshots, crop, and resize them on Mac OS X.
+screenshots of websites, then crop and resize them. Mac OS X only.
 
 == FEATURES/PROBLEMS:
 
@@ -23,9 +23,14 @@ screenshots, crop, and resize them on Mac OS X.
 
 == DEVELOPERS:
 
-Call the +capture+ method with the desired URL and some (optional) options.
+Call the +capture+ method which returns the path to a tempfile containing the image:
 
-    output_screenshot_path =
+    file_path = OSX::Screenshot.capture("http://peepcode.com")
+    # => "/tmp/20293-202020293-2020-full.png" at 320x480
+
+Or, pass some (optional) options.
+
+    file_path =
       OSX::Screenshot.capture(my_url, {
                          :tmp        => "#{Sinatra::Application.root}/tmp",
                          :webkit2png => "#{Sinatra::Application.root}/bin/webkit2png.py",
@@ -33,7 +38,7 @@ Call the +capture+ method with the desired URL and some (optional) options.
                          :width      => 220,
                          :height     => 270
                        })
-    system "mv #{output_screenshot_path} #{local_path}"
+    system "mv #{file_path} #{permanent_path}"
 
 == LICENSE:
 

@@ -1,5 +1,6 @@
 === 0.0.2 / 2010-02-16
 
+* Added simple usage example.
 * Minor URL changes.
 * Noted ImageMagick/mogrify command-line requirement.
 
