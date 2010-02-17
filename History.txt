@@ -1,3 +1,8 @@
+=== 0.0.2 / 2010-02-16
+
+* Minor URL changes.
+* Noted ImageMagick/mogrify command-line requirement.
+
 === 0.0.1 / 2010-02-16
 
 * First release

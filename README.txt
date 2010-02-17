@@ -1,6 +1,6 @@
 = osxscreenshot
 
-* http://gemcutter.org/gems/osxscreenshot
+* http://github.com/topfunky/osxscreenshot
 
 == DESCRIPTION:
 
@@ -15,6 +15,7 @@ screenshots, crop, and resize them on Mac OS X.
 == REQUIREMENTS:
 
 * Uses Python's Cocoa support (standard in Mac OS X). 
+* Uses ImageMagick's command-line tools to resize the image (mogrify). See http://github.com/masterkain/ImageMagick-sl. I hope to replace this with MacRuby or RubyCocoa instead.
 
 == INSTALL:
 
