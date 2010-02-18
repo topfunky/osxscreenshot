@@ -4,13 +4,15 @@
 
 == DESCRIPTION:
 
-Wrapper around webkit2png.py to easily and programmatically capture
-screenshots of websites, then crop and resize them. Mac OS X only.
+A Ruby wrapper around webkit2png.py to easily and programmatically
+capture screenshots of websites, then crop and resize them. Mac OS X
+only.
 
 == FEATURES/PROBLEMS:
 
 * Uses the Python built-in to Mac OS X.
 * You may be able to use snapurl instead of webkit2png.py: http://gemcutter.org/gems/snapurl
+* See examples in use at http://blog.peepcode.com/archives and http://news.peepcode.com/
 
 == REQUIREMENTS:
 
