@@ -3,7 +3,9 @@ require 'open4'
 module OSX
   class Screenshot
     VERSION = '0.0.3'
-
+    
+    class CommandFailed < StandardError; end
+    
     ##
     # Takes a screenshot of a website, optionally resizes it, and writes
     # it to a temporary directory. Returns the file path to the
@@ -109,9 +111,9 @@ module OSX
       end
       
       # Error
-      system "kill -9 #{pid}"
-      raise "Command failed: #{cmd}"
+      raise CommandFailed, "Command failed: #{cmd}"
     rescue Timeout::Error => e
+      Process.kill "KILL", pid
       return nil
     end
 

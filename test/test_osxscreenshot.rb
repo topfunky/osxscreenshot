@@ -1,3 +1,4 @@
+# $: << File.dirname(__FILE__) + "/../lib"
 require "test/unit"
 require "osxscreenshot"
 
@@ -28,6 +29,15 @@ class TestOsxscreenshot < Test::Unit::TestCase
                                          :webkit2png => "sleep 5 &&"
                                        })
     assert_nil @tmpfile
+  end
+
+  def test_handles_error_when_exiting
+    @tmpfile = nil
+    assert_raise OSX::Screenshot::CommandFailed do
+      OSX::Screenshot.capture("http://example.com", {
+                                :webkit2png => "exit 1;"
+                              })
+    end
   end
 
   def teardown
