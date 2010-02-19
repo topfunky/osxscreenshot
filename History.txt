@@ -1,3 +1,8 @@
+=== 0.0.4 / 2010-02-19
+
+* Kill pid properly on timeout
+* Throw OSX::Screenshot::CommandFailed if any command returns nonzero.
+
 === 0.0.2 / 2010-02-16
 
 * Added simple usage example.
