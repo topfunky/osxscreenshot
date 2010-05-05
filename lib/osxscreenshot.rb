@@ -114,6 +114,7 @@ module OSX
       raise CommandFailed, "Command failed: #{cmd}"
     rescue Timeout::Error => e
       Process.kill "KILL", pid
+      Process.wait pid
       return nil
     end
 
