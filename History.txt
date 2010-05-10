@@ -1,3 +1,7 @@
+=== 0.0.5 / 2010-05-10
+
+* Wait for killed processes so zombies don't form
+
 === 0.0.4 / 2010-02-19
 
 * Kill pid properly on timeout

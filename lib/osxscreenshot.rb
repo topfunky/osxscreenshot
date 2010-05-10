@@ -2,7 +2,7 @@ require 'open4'
 
 module OSX
   class Screenshot
-    VERSION = '0.0.4'
+    VERSION = '0.0.5'
     
     class CommandFailed < StandardError; end
     
