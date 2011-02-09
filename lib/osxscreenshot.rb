@@ -1,4 +1,5 @@
 require 'open4'
+require 'fileutils'
 
 module OSX
   class Screenshot

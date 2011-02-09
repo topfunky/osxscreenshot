@@ -1,0 +1,6 @@
+
+gem "open4", "~> 1.0"
+
+env :development, :test do
+  gem "hoe", "2.8.0"
+end
